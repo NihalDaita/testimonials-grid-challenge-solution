@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: hsl(210, 46%, 95%);
+}
+
+#test-1 {
+    background-color: hsl(263, 55%, 52%);
+    color: white;
+}
+
+#test-2 {
+    background-color: hsl(217, 19%, 35%);
+    color: white;
+}
+
+#test-3,
+#test-5 {
+    background-color: white;
+}
+
+#test-4 {
+    background-color: hsl(219, 29%, 14%);
+    color: white;
+}
+
+.grid-item {
+    margin-bottom: 10px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.1);
+    font-family: 'Barlow Semi Condensed', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.grid-item img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid blue;
+}
+
+.grid-item h4 {
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+
+.grid-item p {
+    opacity: 0.7;
+}
+
+.header .name {
+    opacity: 1;
+    font-size: 1rem;
+}
+
+#main-container {
+    padding: 10px;
+    min-width: 320;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header img {
+    margin-right: 10px;
+}
+
+
+
+@media (min-width: 576px) {
+
+    #main-container,
+    #main-left,
+    #top,
+    #bottom {
+        display: flex;
+    }
+
+    #top,
+    #bottom {
+        flex-basis: 50%;
+    }
+
+    #main-container {
+
+        max-width: 800px;
+        /* attempt to center on screen */
+        margin: 0 auto;
+    }
+
+    #main-left .grid-item {
+        margin-right: 10px;
+    }
+
+    #test-1,
+    #test-4 {
+        flex-basis: 75%;
+    }
+
+    #test-2,
+    #test-3 {
+        flex-basis: 25%;
+    }
+
+    #main-left {
+        flex-direction: column;
+        /* space between in main container uses 2% from 68%
+         to create sppace between left and right */
+        flex-basis: 70%;
+    }
+
+    #test-5 {
+        flex-basis: 30%;
+    }
+
+}
